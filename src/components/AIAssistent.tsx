@@ -32,7 +32,7 @@ export default function AIAssistant() {
 
     try {
       const response = await fetch(
-        "SUA_URL_DO_WEBHOOK_AQUI",
+  "https://royaldragonfly-n8n.cloudfy.live/webhook/portfolio-ai",
         {
           method: "POST",
           headers: {
