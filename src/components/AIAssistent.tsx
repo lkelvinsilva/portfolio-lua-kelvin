@@ -31,7 +31,7 @@ export default function AIAssistant() {
     setLoading(true);
 
    try {
-  const response = await fetch("/api/portfolio", {
+  const response = await fetch("https://royaldragonfly-n8n.cloudfy.live/webhook/portfolio-ai", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: currentMessage }),
