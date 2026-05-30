@@ -15,8 +15,8 @@ export const projects = [
       "OpenAI"
     ],
 
-    github: "SEU_GITHUB",
-    demo: "SEU_LINK_VERCEL"
+    github: "https://github.com/lkelvinsilva",
+    demo: "https://wa.me/5585994000246"
   },
 
   {
@@ -36,8 +36,8 @@ export const projects = [
       "JWT"
     ],
 
-    github: "SEU_GITHUB",
-    demo: "SEU_LINK_VERCEL"
+    github: "https://github.com/lkelvinsilva",
+    demo: "https://todo-app-eight-pied-73.vercel.app/"
   },
 
   {
@@ -54,7 +54,7 @@ export const projects = [
       "Vercel"
     ],
 
-    github: "SEU_GITHUB",
-    demo: "SEU_LINK_VERCEL"
+    github: "https://github.com/lkelvinsilva",
+    demo: "https://dra-gabriela-campos-landingpage.vercel.app/"
   }
 ];

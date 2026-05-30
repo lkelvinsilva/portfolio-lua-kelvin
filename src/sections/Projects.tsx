@@ -60,7 +60,7 @@ export default function Projects() {
                 <div className="flex gap-4 mt-8">
 
                   <a
-                    href={project.demo}
+                    href="https://todo-app-eight-pied-73.vercel.app/"
                     target="_blank"
                     className="bg-[#d6a15f] text-black px-5 py-3 rounded-lg font-semibold"
                   >
@@ -68,7 +68,7 @@ export default function Projects() {
                   </a>
 
                   <a
-                    href={project.github}
+                    href="https://github.com/lkelvinsilva"
                     target="_blank"
                     className="border border-[#d6a15f] px-5 py-3 rounded-lg text-[#d6a15f]"
                   >
