@@ -30,47 +30,36 @@ export default function AIAssistant() {
     setInput("");
     setLoading(true);
 
-    try {
-      const response = await fetch(
-  "https://royaldragonfly-n8n.cloudfy.live/webhook/portfolio-ai",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            message: currentMessage,
-          }),
-        }
-      );
+   try {
+  const response = await fetch("/api/portfolio", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: currentMessage }),
+  });
 
-      const data = await response.json();
+  const data = await response.json();
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            data.response ||
-            data.output ||
-            "Não consegui responder no momento.",
-        },
-      ]);
-    } catch (error: unknown) {
+  setMessages((prev) => [
+    ...prev,
+    {
+      role: "assistant",
+      content: data.response || data.output || "Não consegui responder.",
+    },
+  ]);
+} catch (error) {
   console.error(error);
 
   setMessages((prev) => [
     ...prev,
     {
       role: "assistant",
-      content: "Erro ao conectar com a IA. Tente novamente.",
+      content: "Erro ao conectar com a IA.",
     },
   ]);
+} finally {
+  setLoading(false);
 }
-
-    setLoading(false);
-  };
-
+};
   return (
     <>
       {/* BOTÃO FLUTUANTE */}
