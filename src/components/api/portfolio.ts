@@ -1,3 +1,6 @@
+// api/portfolio.ts
+export const runtime = "edge";
+
 export default async function handler(req: Request) {
   if (req.method === "OPTIONS") {
     return new Response(null, { status: 200 });
