@@ -56,7 +56,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="/Curriculo-Lua-Kelvin.pdf"
+            href="/Curriculo_Lua_Kelvin_Atualizado.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#3b2a1c] px-8 py-4 rounded-xl text-[#d6a15f] hover:bg-[#d6a15f] hover:text-black transition duration-300"
