@@ -54,7 +54,7 @@ export const projects = [
       "Vercel"
     ],
 
-    github: "https://github.com/lkelvinsilva",
+    github: "https://github.com/lkelvinsilva/dra-gabriela-campos-landingpage",
     demo: "https://dra-gabriela-campos-landingpage.vercel.app/"
   }
 ];
