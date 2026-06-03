@@ -60,16 +60,18 @@ export default function Projects() {
                 <div className="flex gap-4 mt-8">
 
                   <a
-                    href="https://todo-app-eight-pied-73.vercel.app/"
+                    href={project.demo}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-[#d6a15f] text-black px-5 py-3 rounded-lg font-semibold"
                   >
                     Ver Projeto
                   </a>
 
                   <a
-                    href="https://github.com/lkelvinsilva"
+                    href={project.github}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="border border-[#d6a15f] px-5 py-3 rounded-lg text-[#d6a15f]"
                   >
                     GitHub

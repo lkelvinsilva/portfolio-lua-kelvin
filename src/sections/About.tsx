@@ -13,7 +13,12 @@ export default function About() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
 
         {/* LEFT */}
-        <div>
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
 
           {/* TOP */}
           <div className="flex items-center gap-4 mb-8">
@@ -69,10 +74,16 @@ export default function About() {
 
           </button>
 
-        </div>
+        </motion.div>
 
         {/* RIGHT */}
-        <div className="grid grid-cols-2 gap-6 h-fit">
+        <motion.div
+          className="grid grid-cols-2 gap-6 h-fit"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
 
           {/* CARD */}
           <div className="border border-[#3b2a1c] bg-black/30 backdrop-blur-xl p-8 rounded-2xl hover:border-[#d6a15f]/40 transition duration-300">
@@ -138,12 +149,10 @@ export default function About() {
               Figma,
               Deploy
             </p>
+            </div>
 
-          </div>
-
-        </div>
-
+    </motion.div>
       </div>
-    </motion.section>
-  );
-}
+      </motion.section>
+      );
+    }
