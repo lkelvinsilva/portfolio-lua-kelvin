@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
+
 export default function About() {
   return (
-    <section
+    <motion.section
       id="about"
       className="min-h-screen px-8 py-32 border-t border-[#3b2a1c]/30"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
 
@@ -138,6 +144,6 @@ export default function About() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
