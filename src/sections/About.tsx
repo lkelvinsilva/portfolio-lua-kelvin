@@ -69,8 +69,13 @@ export default function About() {
 
           {/* BUTTON */}
           <button className="mt-14 bg-[#d6a15f] text-black px-10 py-5 uppercase tracking-[3px] font-semibold hover:scale-105 transition duration-300">
-
-            Entre em contato →
+            <a
+              href="https://wa.me/5585994000246"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Entre em contato →
+            </a>
 
           </button>
 
