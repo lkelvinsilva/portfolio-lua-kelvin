@@ -1,10 +1,15 @@
+import { motion } from "framer-motion";
 import { projects } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section
+    <motion.section
       id="projects"
       className="py-32 px-8 bg-[#050505]"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
     >
       <div className="max-w-7xl mx-auto">
 
@@ -24,14 +29,30 @@ export default function Projects() {
         <div className="grid lg:grid-cols-3 gap-8 mt-20">
 
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.title}
-              className="bg-[#111111] border border-[#3b2a1c] rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300"
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              whileHover={{
+                y: -10,
+                scale: 1.03
+              }}
+              className="
+                bg-[#111111]
+                border
+                border-[#3b2a1c]
+                rounded-2xl
+                overflow-hidden
+              "
             >
-              <img
+              <motion.img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-60 object-cover"
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 0.4 }}
               />
 
               <div className="p-8">
@@ -63,7 +84,17 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#d6a15f] text-black px-5 py-3 rounded-lg font-semibold"
+                    className="
+                                bg-[#d6a15f]
+                                text-black
+                                px-5
+                                py-3
+                                rounded-lg
+                                font-semibold
+                                hover:scale-105
+                                transition-all
+                                duration-300
+                              "
                   >
                     Ver Projeto
                   </a>
@@ -81,12 +112,12 @@ export default function Projects() {
 
               </div>
 
-            </div>
+            </motion.div>
           ))}
 
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
