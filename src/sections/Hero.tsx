@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-28 px-8">
+    <section className="min-h-screen flex items-center pt-24 px-5 sm:px-8">
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center">
 
@@ -26,11 +26,11 @@ export default function Hero() {
           {/* TITLE */}
           <h1 className="leading-[0.9] uppercase">
 
-            <span className="block text-[110px] md:text-[140px] font-black text-[#f5e6c8]">
+            <span className="block text-[72px] sm:text-[90px] md:text-[140px] font-black text-[#f5e6c8]">
               LUÃ
             </span>
 
-            <span className="block text-[110px] md:text-[140px] font-black text-[#5a3b23]">
+            <span className="block text-[72px] sm:text-[90px] md:text-[140px] font-black text-[#5a3b23]">
               KELVIN
             </span>
 
@@ -46,7 +46,7 @@ export default function Hero() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-wrap gap-5 mt-12">
+          <div className="flex flex-col sm:flex-row gap-5 mt-12">
 
             <button className="bg-[#d6a15f] text-black px-9 py-4 uppercase tracking-[3px] font-semibold hover:scale-105 transition duration-300">
 
@@ -73,13 +73,13 @@ export default function Hero() {
         >
 
           {/* PHOTO */}
-          <div className="relative">
+          <div className="relative mt-9 w-full max-w-md">
 
             {/* GLOW */}
             <div className="absolute inset-0 bg-[#d6a15f]/20 blur-3xl rounded-[40px]" />
 
             {/* IMAGE */}
-            <div className="relative w-[380px] h-[500px] rounded-[40px] overflow-hidden border border-[#6f4b2d]">
+            <div className="relative w-[280px] sm:w-[340px] md:w-[380px] h-[380px] sm:h-[450px] md:h-[500px] rounded-[40px] overflow-hidden border border-[#6f4b2d]">
 
               <img
                 src="/perfil.jpeg"
