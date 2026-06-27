@@ -8,35 +8,35 @@ export default function Experience() {
     >
       <div className="max-w-7xl mx-auto">
 
-        <span className="text-[#d6a15f] uppercase tracking-[3px] text-sm">
+        <span className="text-[#d6a15f] uppercase tracking-[3px] text-xs sm:text-sm">
           Trajetória
         </span>
 
-        <h2 className="text-[42px] sm:text-[60px] md:text-[90px] font-black uppercase text-[#f5e6c8] mt-4 leading-none">
+        <h2 className="text-[36px] sm:text-[52px] md:text-[90px] font-black uppercase text-[#f5e6c8] mt-4 leading-none">
           Experiência & Formação
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-12 mt-12 md:mt-20">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-12 mt-12 md:mt-20">
 
           {/* EXPERIÊNCIA */}
           <div>
 
-            <h3 className="text-[#d6a15f] uppercase tracking-[2px] text-sm md:text-base mb-8">
+            <h3 className="text-[#d6a15f] uppercase tracking-[2px] text-sm md:text-base mb-6 md:mb-8">
               Experiência Profissional
             </h3>
 
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-5 md:space-y-8">
 
               {experiences.map((exp) => (
                 <div
                   key={exp.title}
                   className="bg-[#111111] border border-[#3b2a1c] rounded-2xl p-5 md:p-8"
                 >
-                  <span className="text-[#d6a15f] text-xs md:text-sm uppercase tracking-[2px]">
+                  <span className="text-[#d6a15f] text-xs uppercase tracking-[2px]">
                     {exp.period}
                   </span>
 
-                  <h4 className="text-xl md:text-2xl font-bold text-[#f5e6c8] mt-3">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-[#f5e6c8] mt-3">
                     {exp.title}
                   </h4>
 
@@ -44,7 +44,7 @@ export default function Experience() {
                     {exp.company}
                   </p>
 
-                  <p className="text-[#f5e6c8]/70 mt-4 md:mt-5 leading-7 md:leading-8 text-sm md:text-base">
+                  <p className="text-[#f5e6c8]/70 mt-4 leading-6 md:leading-8 text-sm md:text-base">
                     {exp.description}
                   </p>
                 </div>
@@ -57,7 +57,7 @@ export default function Experience() {
           {/* FORMAÇÃO */}
           <div>
 
-            <h3 className="text-[#d6a15f] uppercase tracking-[2px] text-sm md:text-base mb-8">
+            <h3 className="text-[#d6a15f] uppercase tracking-[2px] text-sm md:text-base mb-6 md:mb-8">
               Formação & Cursos
             </h3>
 
@@ -68,7 +68,7 @@ export default function Experience() {
                   key={item.course}
                   className="bg-[#111111] border border-[#3b2a1c] rounded-2xl p-5 md:p-8"
                 >
-                  <h4 className="text-lg md:text-xl font-bold text-[#f5e6c8]">
+                  <h4 className="text-base sm:text-lg md:text-xl font-bold text-[#f5e6c8]">
                     {item.course}
                   </h4>
 
@@ -76,7 +76,7 @@ export default function Experience() {
                     {item.institution}
                   </p>
 
-                  <p className="text-[#f5e6c8]/60 mt-2 text-sm">
+                  <p className="text-[#f5e6c8]/60 mt-2 text-xs md:text-sm">
                     {item.period}
                   </p>
                 </div>
