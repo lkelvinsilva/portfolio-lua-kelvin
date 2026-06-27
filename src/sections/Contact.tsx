@@ -6,7 +6,7 @@ export default function Contact() {
     >
       <div className="max-w-6xl mx-auto text-center">
 
-        <h2 className="text-6xl md:text-8xl font-black uppercase text-[#f5e6c8] mt-6">
+        <h2 className="text-6xl md:text-7xl font-black uppercase text-[#f5e6c8] mt-6">
           Vamos construir algo?
         </h2>
 
