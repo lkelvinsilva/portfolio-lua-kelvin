@@ -1,25 +1,20 @@
 export const projects = [
   {
-    title: "CRM PARA CLÍNICA ODONTOLÓGICA",
-
-    category: "SAAS • SISTEMA WEB",
-
-    image: "/crm.png",
-
-    description:
-      "Sistema completo para gestão de clínica odontológica, com pacientes, agenda, prontuário digital, controle financeiro e automações de atendimento.",
-
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Supabase",
-      "React",
-      "Tailwind CSS"
-    ],
-
-    github: "https://github.com/lkelvinsilva",
-    demo: "https://clinica-crm-gabriela.vercel.app/"
-  },
+  title: "CRM PARA CLÍNICA ODONTOLÓGICA",
+  category: "SAAS • SISTEMA WEB",
+  image: "/crm-dashboard.png",
+  description:
+    "Sistema completo para gestão de clínica odontológica, com pacientes, agenda, prontuário digital, controle financeiro e automações de atendimento.",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Supabase",
+    "React",
+    "Tailwind CSS"
+  ],
+  github: "https://github.com/lkelvinsilva",
+  demo: "#"
+},
 
   {
     title: "AUTOMAÇÃO DE ATENDIMENTO COM IA",
