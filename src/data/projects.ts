@@ -2,7 +2,7 @@ export const projects = [
   {
   title: "CRM PARA CLÍNICA ODONTOLÓGICA",
   category: "SAAS • SISTEMA WEB",
-  image: "/crm-dashboard.png",
+  image: "/crm.png",
   description:
     "Sistema completo para gestão de clínica odontológica, com pacientes, agenda, prontuário digital, controle financeiro e automações de atendimento.",
   technologies: [
@@ -13,7 +13,7 @@ export const projects = [
     "Tailwind CSS"
   ],
   github: "https://github.com/lkelvinsilva",
-  demo: "#"
+  demo: "/crm-clinica"
 },
 
   {
