@@ -5,72 +5,168 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-32 px-8 bg-[#050505]"
+      className="bg-[#050505] px-6 py-32 md:px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
 
-        <span className="text-[#d6a15f] uppercase tracking-[4px] text-sm">
-          Projetos
-        </span>
+        {/* CABEÇALHO */}
+        <div className="max-w-3xl">
 
-        <h2 className="text-6xl md:text-8xl font-black uppercase text-[#f5e6c8] mt-4">
-          O que eu construí
-        </h2>
+          <span className="text-sm uppercase tracking-[4px] text-[#d6a15f]">
+            Projetos
+          </span>
 
-        <p className="mt-8 text-[#f5e6c8]/70 max-w-2xl text-lg">
-          Projetos desenvolvidos utilizando tecnologias modernas,
-          focando em performance, experiência do usuário e arquitetura escalável.
-        </p>
+          <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] text-[#f5e6c8] md:text-7xl lg:text-8xl">
+            O que eu construí
+          </h2>
 
-        <div className="grid lg:grid-cols-3 gap-8 mt-20">
+          <p className="mt-8 max-w-2xl text-base leading-7 text-[#f5e6c8]/60 md:text-lg">
+            Sistemas, automações e experiências digitais desenvolvidas
+            para transformar problemas reais em soluções eficientes.
+          </p>
 
-          {projects.map((project) => (
-            <motion.div
+        </div>
+
+        {/* PROJETOS */}
+        <div className="mt-20 space-y-12">
+
+          {projects.map((project, index) => (
+
+            <motion.article
               key={project.title}
-              initial={{ opacity: 0, y: 80 }}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              whileHover={{
-                y: -10,
-                scale: 1.03
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.08,
               }}
+              whileHover={{ y: -6 }}
               className="
-                bg-[#111111]
+                group
+                overflow-hidden
+                rounded-3xl
                 border
                 border-[#3b2a1c]
-                rounded-2xl
-                overflow-hidden
+                bg-[#0d0d0d]
+                transition-colors
+                duration-500
+                hover:border-[#d6a15f]/40
               "
             >
-              <motion.img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-60 object-cover"
-                whileHover={{ scale: 1.08 }}
-                transition={{ duration: 0.4 }}
-              />
 
-              <div className="p-8">
+              {/* IMAGEM */}
+              <div
+                className={`
+                  relative
+                  overflow-hidden
+                  ${index === 0 ? "h-[420px] md:h-[520px]" : "h-[300px] md:h-[380px]"}
+                `}
+              >
 
-                <h3 className="text-3xl font-bold text-[#f5e6c8]">
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    transition-transform
+                    duration-700
+                    group-hover:scale-105
+                  "
+                />
+
+                {/* GRADIENTE */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-[#0d0d0d]
+                    via-[#0d0d0d]/20
+                    to-transparent
+                  "
+                />
+
+                {/* NÚMERO */}
+                <div
+                  className="
+                    absolute
+                    right-6
+                    top-6
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-full
+                    border
+                    border-[#d6a15f]/40
+                    bg-black/40
+                    text-sm
+                    font-semibold
+                    text-[#d6a15f]
+                    backdrop-blur-md
+                  "
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+              </div>
+
+              {/* CONTEÚDO */}
+              <div className="p-7 md:p-10">
+
+                {/* CATEGORIA */}
+                <span className="text-xs font-semibold uppercase tracking-[3px] text-[#d6a15f]">
+                  {project.category}
+                </span>
+
+                {/* TÍTULO */}
+                <h3
+                  className={`
+                    mt-4
+                    font-black
+                    uppercase
+                    leading-tight
+                    text-[#f5e6c8]
+                    ${
+                      index === 0
+                        ? "text-3xl md:text-5xl"
+                        : "text-2xl md:text-4xl"
+                    }
+                  `}
+                >
                   {project.title}
                 </h3>
 
-                <p className="mt-6 text-[#f5e6c8]/70 leading-8">
+                {/* DESCRIÇÃO */}
+                <p className="mt-6 max-w-3xl text-base leading-8 text-[#f5e6c8]/60 md:text-lg">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-6">
+                {/* TECNOLOGIAS */}
+                <div className="mt-7 flex flex-wrap gap-2">
 
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-[#d6a15f]/10 border border-[#d6a15f]/20 text-[#d6a15f] px-3 py-1 rounded-full text-sm"
+                      className="
+                        rounded-full
+                        border
+                        border-[#d6a15f]/20
+                        bg-[#d6a15f]/5
+                        px-3
+                        py-1.5
+                        text-xs
+                        font-medium
+                        text-[#d6a15f]
+                      "
                     >
                       {tech}
                     </span>
@@ -78,41 +174,68 @@ export default function Projects() {
 
                 </div>
 
-                <div className="flex gap-4 mt-8">
+                {/* BOTÕES */}
+                <div className="mt-8 flex flex-wrap gap-4">
 
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                                bg-[#d6a15f]
-                                text-black
-                                px-5
-                                py-3
-                                rounded-lg
-                                font-semibold
-                                hover:scale-105
-                                transition-all
-                                duration-300
-                              "
-                  >
-                    Ver Projeto
-                  </a>
+                  {project.demo !== "#" && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        inline-flex
+                        items-center
+                        gap-2
+                        rounded-full
+                        bg-[#d6a15f]
+                        px-6
+                        py-3
+                        text-sm
+                        font-bold
+                        text-black
+                        transition-all
+                        duration-300
+                        hover:scale-105
+                        hover:bg-[#e3b575]
+                      "
+                    >
+                      Ver projeto
+                      <span>↗</span>
+                    </a>
+                  )}
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-[#d6a15f] px-5 py-3 rounded-lg text-[#d6a15f]"
+                    className="
+                      inline-flex
+                      items-center
+                      gap-2
+                      rounded-full
+                      border
+                      border-[#d6a15f]/50
+                      px-6
+                      py-3
+                      text-sm
+                      font-semibold
+                      text-[#d6a15f]
+                      transition-all
+                      duration-300
+                      hover:border-[#d6a15f]
+                      hover:bg-[#d6a15f]/10
+                    "
                   >
                     GitHub
+                    <span>↗</span>
                   </a>
 
                 </div>
 
               </div>
 
-            </motion.div>
+            </motion.article>
+
           ))}
 
         </div>

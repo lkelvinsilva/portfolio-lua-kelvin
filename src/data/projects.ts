@@ -1,31 +1,78 @@
 export const projects = [
   {
+    title: "CRM PARA CLÍNICA ODONTOLÓGICA",
+
+    category: "SAAS • SISTEMA WEB",
+
+    image: "/crm.png",
+
+    description:
+      "Sistema completo para gestão de clínica odontológica, com pacientes, agenda, prontuário digital, controle financeiro e automações de atendimento.",
+
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "React",
+      "Tailwind CSS"
+    ],
+
+    github: "https://github.com/lkelvinsilva",
+    demo: "https://clinica-crm-gabriela.vercel.app/"
+  },
+
+  {
     title: "AUTOMAÇÃO DE ATENDIMENTO COM IA",
+
+    category: "AUTOMAÇÃO • INTELIGÊNCIA ARTIFICIAL",
 
     image: "/agenteia.jpeg",
 
     description:
-      "Desenvolvimento de um agente de atendimento ao cliente utilizando N8N, OpenAI e integração com Whatsapp. O sistema automatiza respostas, fornece informações em tempo real e melhora a experiência do usuário.",
+      "Agente inteligente integrado ao WhatsApp, n8n e OpenAI para automatizar atendimentos, respostas, campanhas comerciais e processos de relacionamento com clientes.",
+
     technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "PostgreSQL",
-      "JWT",
-      "OpenAI"
+      "n8n",
+      "OpenAI",
+      "WhatsApp",
+      "Evolution API",
+      "Node.js"
     ],
 
     github: "https://github.com/lkelvinsilva",
-    demo: "https://wa.me/5585994000246"
+    demo: "https://wa.me/5585991355731"
   },
 
   {
-    title: "Task Manager",
+    title: "SITE + AUTOMAÇÃO PARA CLÍNICA",
+
+    category: "WEB • AUTOMAÇÃO",
+
+    image: "/site.png",
+
+    description:
+      "Website profissional para clínica odontológica, desenvolvido com interface responsiva, agendamento e integração com automações de atendimento e inteligência artificial.",
+
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+
+    github: "https://github.com/lkelvinsilva/dra-gabriela-campos-landingpage",
+    demo: "https://dra-gabriela-campos-landingpage.vercel.app/"
+  },
+
+  {
+    title: "TASK MANAGER",
+
+    category: "FULL STACK • APLICAÇÃO WEB",
 
     image: "/login.png",
 
     description:
-      "Aplicação Full Stack para gerenciamento de tarefas com autenticação JWT, PostgreSQL, API REST e interface moderna desenvolvida em React.",
+      "Aplicação Full Stack para gerenciamento de tarefas, com autenticação, API REST, banco de dados PostgreSQL e interface moderna desenvolvida em React.",
 
     technologies: [
       "React",
@@ -38,23 +85,5 @@ export const projects = [
 
     github: "https://github.com/lkelvinsilva",
     demo: "https://todo-app-eight-pied-73.vercel.app/"
-  },
-
-  {
-    title: "Site Profissional para Dentistas e Clínicas, com automação de agendamento e integração com IA",
-
-    image: "/site.png",
-
-    description:
-    "Desenvolvimento de um site profissional para dentistas e clínicas, com automação de agendamento e integração com IA para atendimento ao cliente. O sistema inclui uma interface moderna, responsiva e fácil de usar, além de funcionalidades avançadas para melhorar a experiência do usuário e otimizar o processo de agendamento.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vercel"
-    ],
-
-    github: "https://github.com/lkelvinsilva/dra-gabriela-campos-landingpage",
-    demo: "https://dra-gabriela-campos-landingpage.vercel.app/"
   }
 ];

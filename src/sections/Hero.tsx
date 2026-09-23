@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -46,22 +47,32 @@ export default function Hero() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-5 mt-12">
+          <Link
+  href="/projects"
+  className="
+    bg-[#d6a15f]
+    text-black
+    px-9
+    py-4
+    uppercase
+    tracking-[3px]
+    font-semibold
+    hover:scale-105
+    transition
+    duration-300
+    text-center
+  "
+>
+  Ver Projetos →
+</Link>
 
-            <button className="bg-[#d6a15f] text-black px-9 py-4 uppercase tracking-[3px] font-semibold hover:scale-105 transition duration-300">
-
-              Ver Projetos →
-
-            </button>
-
-            <button className="border border-[#5a3b23] px-9 py-4 uppercase tracking-[3px] hover:bg-[#1a120d] transition duration-300">
-
-              GitHub
-
-            </button>
-
-          </div>
-
+            <Link
+  href="https://github.com/lkelvinsilva"
+  target="_blank"
+  className="border border-[#5a3b23] px-9 py-4 uppercase tracking-[3px] hover:bg-[#1a120d] transition duration-300"
+>
+  GitHub
+</Link>
         </motion.div>
 
         {/* RIGHT */}
